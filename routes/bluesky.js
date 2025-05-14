@@ -7,7 +7,7 @@ router.get("/:query", async (req, res) => {
   const sortBy = req.query.sort || "top"; // default to top
 
   try {
-    const url = `https://public.api.bsky.app/xrpc/app.bsky.feed.searchPosts?q=${query}&sort=${sortBy}`;
+    const url = `https://api.bsky.app/xrpc/app.bsky.feed.searchPosts?q=${query}&sort=${sortBy}`;
     const response = await fetch(url);
     const data = await response.json();
 
